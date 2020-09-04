@@ -1,0 +1,54 @@
+html, body {
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+ 
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.5.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes breath {
+    0%{
+        background-size: 100% auto;
+    }
+    50%{
+        background-size: 140% auto;
+    }
+    100%{
+        background-size: 100% auto;
+    }
+}
+  
+#slide{
+    width: 99%;
+    height: 99%;
+    margin: 0 auto;
+    animation: breath 20s linear infinite;
+    background: url("../homeImg/DSC_7003.JPG") center center no-repeat;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    color: rgb(243, 240, 240);
+    font-weight: 550;
+}
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+}
+.navbar-light .navbar-brand {
+    color: rgba(255,255,255, 1);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: rgba(255,255,255, 1);
+}
