@@ -3,8 +3,6 @@ const ejs     = require("ejs");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const smtpTransport = require("nodemailer-smtp-transport");
-var send = require('gmail-send');
-const path = require("path");
 // var fancybox = require('@fancyapps/fancybox');
 
 var app = express();
@@ -78,6 +76,6 @@ app.get("/about-mux", function(req, res){
 });
 
 
-app.listen(8080|| process.env.PORT, function(){
+app.listen(8080 || process.env.PORT, function(){
     console.log("app started");
 });
