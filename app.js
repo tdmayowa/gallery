@@ -76,6 +76,8 @@ app.get("/about-mux", function(req, res){
 });
 
 
-app.listen(8080 || process.env.PORT, function(){
+var port = process.env.PORT || 8080;
+
+app.listen(port, function(){
     console.log("app started");
 });
