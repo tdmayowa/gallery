@@ -4,7 +4,8 @@
   "description": "Mux Media Photography Web Application",
   "main": "app.js",
   "scripts": {
-    "start": "npm run build && node app.js",
+    "postinstall": "npm run build",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "tDM",
@@ -25,6 +26,7 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.0.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "webpack-dev-server": "^3.11.0"
   }
 }
