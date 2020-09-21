@@ -1,0 +1,50 @@
+<%- include("../partials/galleryHeader") %>
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-static-top fixed-top bg-transparent">
+        <a class="navbar-brand" href="/">Mux_mediaPhotography</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GALLERY</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/gallery/products">Products</a>
+                  <a class="dropdown-item" href="/gallery/pre-wedding">Pre-wedding</a>
+                  <a class="dropdown-item" href="/gallery/wedding">Wedding</a>
+                  <a class="dropdown-item" href="/gallery/studio-shoot">Studio shoot</a>
+                  <a class="dropdown-item" href="/gallery/beauty">Beauty</a>
+                  <a class="dropdown-item" href="/gallery/portrait">Portrait</a>
+                  <a class="dropdown-item" href="/gallery">General</a>
+                </div>
+              </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/about-mux">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact-us">CONTACT US</a>
+            </li>
+        </ul>
+        </div>
+    </nav>    
+  
+
+    <div class="container">
+        <header class="jumbotron" style="background-color: rgba(255, 255, 255, 1);">
+            <h1 style="font-size: 6em;">Mux' Media</h1>
+            <p>“A good snapshot keeps a moment from running away.”<span class="p-ex">   ―  E. Welty</span></p>
+        </header>
+        <div class="container2">
+            <%images.forEach(function(image){%>
+                <div class="grid-item">
+                    <a data-fancybox="gallery" href="<%=image.image%>"><img src="<%=image.image%>"></a>
+                </div>
+            <%});%>
+        </div>
+    </div> 
+
+<%- include("../partials/galleryFooter") %>
+
+

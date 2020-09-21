@@ -17,6 +17,84 @@
             font-weight: normal;
             font-style: normal;
         }
+
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style-type: none;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 3.8rem;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7em;
+            color: rgb(19, 18, 18);
+            font-weight: 550;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+            color: black;
+            font-weight: 700;
+        }
+
+        .navbar-light .navbar-brand {
+            color: black;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: medium;
+            font-weight: 550;
+        }
+
+
+
+        .jumbotron {
+            background-color: white;
+            padding: 4rem 0rem;
+        }
+
+        .bg-light {
+            background-color: rgba(255, 255, 255, 1)!important;
+        }
+        .container2 {
+            width: 80%;
+            column-count: 3;
+            margin: 0 auto;
+        }
+
+        .grid-item img{
+            width: 100%;
+            height: auto;
+            margin: 1em 1em 1em 0.5em;
+        }
+
+        img {
+            vertical-align: bottom;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
+        p {
+            border: solid 1px rgb(19, 19, 19);
+            background-color: rgb(55, 55, 55);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15em;
+            font-style: italic;
+            color: #FFD700;
+        }
+
+        .p-ex {
+            font-weight: bolder;
+        }
+
         .nav-transparent{
             background-color: transparent !important;
         }
@@ -28,8 +106,63 @@
             margin-left: 39%;
             color: black;
         }
-        i.fab{
-            padding-left: 3%;
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 10rem;
+            padding: .5rem 0;
+            margin: .125rem 0 0;
+            font-size: 0.7em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 550;
+            color: #212529;
+            text-align: left;
+            list-style: none;
+            /*  */
+            background-color: transparent;
+            background-clip: padding-box;
+            border: 1px solid rgba(0,0,0,.15);
+            border-radius: .25rem;
+        }
+
+        .dropdown-menu{
+            border: none;
+        }
+
+        .dropdown-item {
+            /*  */
+            color:  rgb(0, 0, 0);
+        }
+        .dropdown-item:hover {
+            background-color: rgba(0,0,0,.3);
+            color:  rgb(255, 253, 253);
+            font-weight: 600;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0; 
+            /* remove the gap so it doesn't close */
+        }
+
+        @media only screen and (min-width: 768px){
+            .container2 {
+                width: 80%;
+                column-count: 3;
+                margin: 0 auto;
+            } 
+        }
+        @media only screen and (min-width: 768px){
+            .container2 {
+                width: 80%;
+                column-count: 4;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>

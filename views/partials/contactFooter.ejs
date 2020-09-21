@@ -4,7 +4,38 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-
+        var a = $(".nav-link");
+        var b = $("#main");
+        var c = $(".dropdown-item");
+        // var d = window.matchMedia("(min-width: 268px)");
+        var e = window.matchMedia("(min-width: 1000px)");
+        if (e) {
+            a.hover(function(e){
+                b.css("paddingTop", "13%");
+            });
+            c.hover(function(e){
+                b.css("paddingTop", "13%")
+            });
+            a.mouseout(function(e){
+                b.css("paddingTop", "12%");
+            });
+            c.mouseout(function(e){
+                b.css("paddingTop", "12%");
+            });
+        } else {
+            a.hover(function(){
+                b.css("paddingTop", "48%");
+            });
+            c.hover(function(){
+                b.css("paddingTop", "48%")
+            });
+            a.mouseout(function(){
+                b.css("paddingTop", "45%");
+            });
+            c.mouseout(function(){
+                b.css("paddingTop", "45%");
+            });
+        }
     </script>
     </body>
 </html>
