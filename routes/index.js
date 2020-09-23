@@ -55,7 +55,7 @@ router.post("/mux-media/login", passport.authenticate("local", {
 //log out route
 router.get("/mux-media/logout", function(req, res){
     req.logout();
-    res.redirect("/gallery")
+    res.redirect("/")
 });
 
 module.exports = router;
