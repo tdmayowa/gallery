@@ -34,13 +34,13 @@ animation: breath 20s linear infinite;
 background: url("../homeImg/DSC_7003.JPG") center center no-repeat;
 }
 
-.navbar-light .navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link {
 font-family: 'Montserrat', sans-serif;
-font-size: 0.7em;
+font-size: 10px;
 color: rgb(243, 240, 240);
 font-weight: 550;
 }
-.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
 color: rgba(255, 255, 255, 1);
 font-weight: 700;
 }
@@ -50,15 +50,19 @@ display: block;
 padding: .15rem .5rem;
 }
 
-.navbar-light .navbar-brand {
+.navbar-dark .navbar-brand {
 color: rgba(255,255,255, 1);
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-font-size: medium;
+font-size: 13px;
 font-weight: 550;
 }
 
-.navbar-light .navbar-brand:hover {
+.navbar-dark .navbar-brand:hover {
 color: rgba(255,255,255, 1);
+}
+
+.navbar-toggler-icon{
+    width: 25px;
 }
 
 .dropdown-menu {
@@ -105,6 +109,26 @@ color: rgba(255,255,255, 1);
     margin-top: 0; 
     /* remove the gap so it doesn't close */
 }
+@media only screen and (min-width: 768px){
+    .navbar-dark .navbar-nav .nav-link {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        color: rgb(243, 240, 240);
+        font-weight: 550;
+    }
+    .navbar-dark .navbar-brand {
+        color: rgba(255,255,255, 1);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+        font-weight: 550;
+    }
+    .navbar-toggler-icon{
+        width: 32px;
+    }
+    .dropdown-item {
+        font-size: 15px;
+    }
+}
 
 @media only screen and (min-width: 1000px) {
     @keyframes breath {
@@ -118,5 +142,19 @@ color: rgba(255,255,255, 1);
             background-size: 100% auto;
         }
     }
-        
+    .navbar-dark .navbar-nav .nav-link {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        color: rgb(243, 240, 240);
+        font-weight: 550;
+    }
+    .navbar-dark .navbar-brand {
+        color: rgba(255,255,255, 1);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        font-weight: 550;
+    }
+    .dropdown-item {
+        font-size: 13px;
+    }
 }

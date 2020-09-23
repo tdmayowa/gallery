@@ -8,13 +8,14 @@
         var b = $("#main");
         var c = $(".dropdown-item");
         // var d = window.matchMedia("(min-width: 268px)");
-        var e = window.matchMedia("(min-width: 1000px)");
+        var e = window.matchMedia("(min-width: 1000px)").matches;
+        var f = window.matchMedia("(min-width: 768px)").matches;
         if (e) {
             a.hover(function(e){
-                b.css("paddingTop", "13%");
+                b.css("paddingTop", "12%");
             });
             c.hover(function(e){
-                b.css("paddingTop", "13%")
+                b.css("paddingTop", "12%")
             });
             a.mouseout(function(e){
                 b.css("paddingTop", "12%");
@@ -22,12 +23,25 @@
             c.mouseout(function(e){
                 b.css("paddingTop", "12%");
             });
-        } else {
+        }else if (f){
+            a.hover(function(e){
+                b.css("paddingTop", "45%");
+            });
+            c.hover(function(e){
+                b.css("paddingTop", "45%")
+            });
+            a.mouseout(function(e){
+                b.css("paddingTop", "35%");
+            });
+            c.mouseout(function(e){
+                b.css("paddingTop", "35%");
+            });
+        }else {
             a.hover(function(){
-                b.css("paddingTop", "48%");
+                b.css("paddingTop", "60%");
             });
             c.hover(function(){
-                b.css("paddingTop", "48%")
+                b.css("paddingTop", "60%")
             });
             a.mouseout(function(){
                 b.css("paddingTop", "45%");

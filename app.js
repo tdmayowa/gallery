@@ -1,5 +1,5 @@
 const express = require("express");
-var app = express();
+const app = express();
 const ejs     = require("ejs");
 const bodyParser = require("body-parser");
 const mongoose    = require("mongoose");
@@ -10,14 +10,17 @@ const passport    = require("passport");
 const localStrategy = require("passport-local");
 const Image  = require("./models/image");
 const User = require("./models/user");
-var middleware = require("./middleware/index");
+const middleware = require("./middleware/index");
 
-var image = require("./routes/image");
-var index = require("./routes/index");
+const image = require("./routes/image");
+const index = require("./routes/index");
 
-
+const URL = "mongodb://tdm:08087016021@cluster0-shard-00-00.6tcng.mongodb.net:27017,cluster0-shard-00-01.6tcng.mongodb.net:27017,cluster0-shard-00-02.6tcng.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-f0ytmy-shard-0&authSource=admin&retryWrites=true&w=majority"
 var url = "mongodb://localhost/mux_v4";
-mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(URL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connection.on("connected", function(){
+    console.log("Mongoose is connected");
+})
 app.set("view engine", "ejs");
 
 //This line tells points makes public directory the default for all styles
