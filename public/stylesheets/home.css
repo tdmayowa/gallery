@@ -1,5 +1,5 @@
 html, body {
-background-color: rgba(0, 0, 0, 0.9);
+background-color: #1f000f;
 height: 100%;
 margin: 0;
 padding: 0;
@@ -147,11 +147,19 @@ color: rgba(255,255,255, 1);
             background-size: 100% auto;
         }
         50%{
-            background-size: 140% auto;
+            background-size: 120% auto;
         }
         100%{
             background-size: 100% auto;
         }
+    }
+    #slide{
+        width: 99%;
+        height: 99%;
+        margin: 0 auto;
+        animation: breath 20s linear infinite;
+        /* background: url("../homeImg/DSC_3798.JPG") center top no-repeat; */
+        background: url("../homeImg/DSC_3798.JPG") 73% 37% no-repeat;
     }
     .navbar-dark .navbar-nav .nav-link {
         font-family: 'Montserrat', sans-serif;
