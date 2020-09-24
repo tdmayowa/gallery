@@ -56,7 +56,7 @@ router.get("/gallery/pre-wedding", function(req, res){
     //Get all images from DB
     Image.find({category: "pre-wedding"}, function(err, allImages){
         if(err){
-            console.log(err); 
+            console.log(err);
         }else{
             res.render('./gallery/pre-wedding', {images: allImages});
         }
