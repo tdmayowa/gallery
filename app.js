@@ -17,7 +17,7 @@ const index = require("./routes/index");
 
 const URL = "mongodb://tdm:08087016021@cluster0-shard-00-00.6tcng.mongodb.net:27017,cluster0-shard-00-01.6tcng.mongodb.net:27017,cluster0-shard-00-02.6tcng.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-f0ytmy-shard-0&authSource=admin&retryWrites=true&w=majority"
 var url = "mongodb://localhost/mux_v4";
-mongoose.connect(URL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 mongoose.connection.on("connected", function(){
     console.log("Mongoose is connected");
 })
